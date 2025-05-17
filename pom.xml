@@ -26,8 +26,9 @@
         </dependency>
     </dependencies>
 
-    <!--<build>
-        <plugins>
+    <build>
+        <finalName>docker-k8s-demo</finalName>
+        <!--<plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -37,7 +38,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-        </plugins>
-    </build>-->
+        </plugins>-->
+    </build>
 
 </project>
