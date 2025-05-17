@@ -28,17 +28,13 @@
 
     <build>
         <finalName>docker-k8s-demo</finalName>
-        <!--<plugins>
+        <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
+                <!-- This plugin will help run jar from command prompt -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        </plugins>-->
+        </plugins>
     </build>
 
 </project>
