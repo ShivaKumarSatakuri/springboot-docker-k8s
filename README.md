@@ -8,7 +8,7 @@
 
 
 - Understand important kubernetes commands
-  - Understand difference between a cluster and a pod
+  - Understand difference between container | pod | node | cluster
   - Deploy a service into the pod
   - check logs for a service in the pod
   - Stop and re-start the pod
