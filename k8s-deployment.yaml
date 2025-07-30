@@ -26,3 +26,9 @@ spec:
             periodSeconds: 10     # How often to perform the probe
             timeoutSeconds: 1     # Timeout for the probe
             failureThreshold: 3   # Number of failures before restart
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 10
