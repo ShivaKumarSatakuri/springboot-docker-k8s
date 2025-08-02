@@ -20,7 +20,7 @@ spec:
             - containerPort: 8080
           livenessProbe:
             httpGet:
-              path: /healthz # Path to the health endpoint
+              path: /liveness # Path to the health endpoint
               port: 8080    # Port where the application listens
             initialDelaySeconds: 15 # Delay before the first probe
             periodSeconds: 10     # How often to perform the probe
