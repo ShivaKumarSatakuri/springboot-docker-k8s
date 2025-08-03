@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Deployment  #Need to try by changing this value to 'Pod'
 metadata:
   name: docker-k8s-demo
 spec:
