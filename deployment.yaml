@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment  #Need to try by changing this value to 'Pod'
+metadata:
+  name: docker-k8s-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docker-k8s-demo
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-demo
+    spec:
+      containers:
+        - name: docker-k8s-demo
+          image: shivakumarsatakuri/docker-k8s-repo:deploy-build
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-k8s-demo-service
+spec:
+  selector:
+    app: docker-k8s-demo
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+  type: NodePort
