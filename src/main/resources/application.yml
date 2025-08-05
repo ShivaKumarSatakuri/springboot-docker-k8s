@@ -1,2 +1,13 @@
 server:
   port: 8080
+
+# Exposing actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
