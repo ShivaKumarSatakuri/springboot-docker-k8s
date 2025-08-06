@@ -13,4 +13,10 @@ public class TestController {
         System.out.println("Test API call at - " + LocalDateTime.now());
         return "Test API call.";
     }
+
+    @GetMapping("/test-2")
+    public String test2() {
+        System.out.println("Test API 2 call at - " + LocalDateTime.now());
+        return "Test API 2 call.";
+    }
 }
