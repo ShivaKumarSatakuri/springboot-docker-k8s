@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: docker-k8s-demo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1   # This will allow all endpoints to pass
+spec:
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+          - path: /(.*)  # This will allow all endpoints to pass
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: docker-k8s-demo-service
+                port:
+                  number: 8080
