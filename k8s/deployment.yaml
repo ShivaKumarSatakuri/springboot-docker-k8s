@@ -19,6 +19,13 @@ spec:
           ports:
             - containerPort: 8080
 
+          # Configuring HPA setup
+          resources:
+            requests:
+              cpu: 100m                         # The container is guaranteed 0.1 CPU core. Kubernetes uses this to schedule the pod on a node that has at least 0.1 core available.
+            limits:
+              cpu: 500m                         # The container can use up to 0.5 CPU core, but not more. If it tries to use more, it will be throttled.
+
           # Checks the liveness of the docker container. Restarts the pod in case of any deadlocks
           livenessProbe:
             httpGet:
